@@ -13,10 +13,9 @@ import javax.persistence.Table
 data class Producto(
         @Id
         var uuid: UUID?=UUID.randomUUID(),
-        var uuidVenta:UUID?= null ,
-        var uuidProducto:UUID?= null,
-        var cantidad:Long?= 0,
-        var valorParcial:Double,
+        var nombre:String?= null ,
+        var precio:Double?= null,
+        var stock:Int?= 0,
         var deleted: Boolean?= false
 
 

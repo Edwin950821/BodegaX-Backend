@@ -1,4 +1,4 @@
-package com.edwin.bodega_x.service.productoventa
+package com.edwin.bodega_x.service.productoVenta
 
 import com.edwin.bodega_x.model.ProductoVenta
 import java.util.UUID

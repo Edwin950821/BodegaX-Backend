@@ -1,13 +1,16 @@
 package com.edwin.bodega_x.service.admin.impl
 
+import com.edwin.bodega_x.dto.LoginDto
 import com.edwin.bodega_x.model.Admin
 import com.edwin.bodega_x.repository.AdminRepository
 import com.edwin.bodega_x.service.admin.AdminService
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.http.HttpStatus
+import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 import java.util.*
 
+@Service
 class AdminServiceImpl(
         //2) Llamar al repositorio
         private val repository: AdminRepository
@@ -36,5 +39,11 @@ class AdminServiceImpl(
 
     override fun deleted(admin: Admin) {
         return repository.delete(admin)
+    }
+
+    override fun login(login: LoginDto): Admin {
+        return  repository.findFirstByNombreAndPassword(login.username!!, login.password!!).orElseThrow{
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED,"Credenciales No Validas")
+        }
     }
 }

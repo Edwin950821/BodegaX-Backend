@@ -15,7 +15,7 @@ data class Venta (
         var uuid: UUID?=UUID.randomUUID(),
         var uuidAdmin:UUID?= null ,
         var uuidCliente: UUID?= null,
-        var totalVenta: Double?= 0.0,
+        var totalVenta: Long?= 0,
         var deleted: Boolean?= false
 
 )

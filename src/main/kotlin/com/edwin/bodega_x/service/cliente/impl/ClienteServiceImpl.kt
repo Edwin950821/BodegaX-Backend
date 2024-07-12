@@ -5,9 +5,11 @@ import com.edwin.bodega_x.repository.ClienteRepository
 import com.edwin.bodega_x.service.cliente.ClienteService
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.http.HttpStatus
+import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 import java.util.*
 
+@Service
 class ClienteServiceImpl(
         //2) Llamar al repositorio
         private val repository: ClienteRepository

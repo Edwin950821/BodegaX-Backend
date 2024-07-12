@@ -1,13 +1,16 @@
-package com.edwin.bodega_x.service.producto
+package com.edwin.bodega_x.service.producto.impl
 
 import com.edwin.bodega_x.model.Producto
 import com.edwin.bodega_x.repository.ProductoRepository
 import com.edwin.bodega_x.service.producto.ProductoService
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.http.HttpStatus
+import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 import java.util.*
 
+
+@Service
 class ProductoServiceImpl(
         //2) Llamar al repositorio
         private val repository: ProductoRepository
