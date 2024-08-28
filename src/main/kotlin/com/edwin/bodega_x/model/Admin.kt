@@ -19,7 +19,8 @@ data class Admin (
         var password: String?= "",
         var direccion: String?= "",
         var stock: Int?= 0,
-        var deleted: Boolean?= false
+        var deleted: Boolean?= false,
+        var id: String? = null
 
  )
 
