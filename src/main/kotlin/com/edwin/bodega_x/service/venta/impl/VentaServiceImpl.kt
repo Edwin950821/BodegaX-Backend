@@ -3,7 +3,6 @@ package com.edwin.bodega_x.service.venta.impl
 import com.edwin.bodega_x.model.Venta
 import com.edwin.bodega_x.repository.VentaRepository
 import com.edwin.bodega_x.service.venta.VentaService
-import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
