@@ -8,5 +8,5 @@ interface VentaService { // Interfaz que define las operaciones disponibles para
     fun findByUuid(uuid: UUID): Venta // Método para buscar una venta específica utilizando su identificador único (UUID).
     fun create(venta: Venta): Venta // Método para crear una nueva venta, retornando la instancia de la venta creada.
     fun update(venta: Venta): Venta // Método para actualizar los detalles de una venta existente, retornando la venta actualizada.
-    fun deleted(venta: Venta) // Método para eliminar una venta del sistema, asegurando que ya no esté disponible para el sitema.
+    fun deleted(venta: Venta) // Método para eliminar una venta del sistema, asegurando que ya no esté disponible para el sistema.
 }
